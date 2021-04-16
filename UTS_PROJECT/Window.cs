@@ -45,7 +45,7 @@ namespace UTS_PROJECT
 
             GL.Enable(EnableCap.DepthTest);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-            //justin.render();
+            justin.render();
             alfons.render();
             johansen.render();
             SwapBuffers();

@@ -388,6 +388,10 @@ namespace UTS_PROJECT.Justin
                 Console.WriteLine(item);
             });
         }
+        public void setPositionBezier(Vector3 p)
+        {
+            _position = new Vector3(p.X - 0.0f, p.Y, p.Z);
+        }
         public void setupBezier()
         {
             _vertextBufferObject = GL.GenBuffer();

@@ -17,6 +17,7 @@ namespace UTS_PROJECT
         public Mesh duri2, duri3;
         public Mesh duri4, duri5;
         public Mesh tongkat;
+        public Mesh tali;
 
         public JustinProps()
         {
@@ -33,6 +34,7 @@ namespace UTS_PROJECT
             duri4 = new Mesh();
             duri5 = new Mesh();
             tongkat = new Mesh();
+            tali = new Mesh();
 
             cannon_1.setPosition(new Vector3(0.0f, 0.0f, 0.0f));
             duri.setPosition(new Vector3(0.0f, 0.15f, 0.0f));
@@ -41,8 +43,9 @@ namespace UTS_PROJECT
             duri3.setPosition(new Vector3(0.0f, -0.15f, 0.0f));
             duri4.setPosition(new Vector3(0.0f, 0.0f, 0.15f));
             duri5.setPosition(new Vector3(0.0f, 0.0f, -0.15f));
-            tongkat.setPosition(new Vector3(0.4f, 0.6f, 0.0f));
-            tongkat.setSize(new Vector3(1.5f, 0.06f, 0.06f));
+            tongkat.setPosition(new Vector3(0.5f, -0.29f, 0.0f));
+            tongkat.setSize(new Vector3(0.06f, 1.5f, 0.06f));
+            tali.setPositionBezier(new Vector3(0.0f, -0.2f, 0.0f));
 
             cannon_1.radius = new Vector3(0.2f, 0.2f, 0.2f);
 
@@ -53,6 +56,7 @@ namespace UTS_PROJECT
             duri4.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader1.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader1.frag");
             duri5.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader1.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader1.frag");
             tongkat.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.frag");
+            tali.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.frag");
 
             duri.createKerucut();
             duri1.createKerucut();
@@ -62,6 +66,9 @@ namespace UTS_PROJECT
             duri5.createKerucut();
             tongkat.createBoxVertices();
             cannon_1.createBall();
+            tali.createBezier(new Vector3(tali._position.X + 0.0f, tali._position.Y + 0.5f, tali._position.Z),
+                new Vector3(tali._position.X + 0.5f, tali._position.Y + 0.5f, tali._position.Z),
+                new Vector3(tali._position.X + 0.5f, tali._position.Y + 0.7f, tali._position.Z), 0.04f);
 
             duri.setupObject();
             duri1.setupObject();
@@ -71,6 +78,7 @@ namespace UTS_PROJECT
             duri5.setupObject();
             cannon_1.setupObject();
             tongkat.setupObject();
+            tali.setupBezier();
 
             duri1._transform *= Matrix4.CreateTranslation(new Vector3(-duri1._position.X, -duri1._position.Y, -duri1._position.Z));
             duri1._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(90));
@@ -92,10 +100,6 @@ namespace UTS_PROJECT
             duri5._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(270));
             duri5._transform *= Matrix4.CreateTranslation(new Vector3(duri5._position.X, duri5._position.Y, duri5._position.Z));
 
-            tongkat._transform *= Matrix4.CreateTranslation(new Vector3(-tongkat._position.X, -tongkat._position.Y, -tongkat._position.Z));
-            tongkat._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(45));
-            tongkat._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(30));
-            tongkat._transform *= Matrix4.CreateTranslation(new Vector3(tongkat._position.X, tongkat._position.Y, tongkat._position.Z));
 
         }
 
@@ -136,6 +140,10 @@ namespace UTS_PROJECT
             tongkat._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(0.3f));
             tongkat._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(0.3f));
 
+            tali._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(0.3f));
+            tali._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(0.3f));
+            tali._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(0.3f));
+
             duri.renderBezier();
             duri1.renderBezier();
             duri2.renderBezier();
@@ -144,7 +152,8 @@ namespace UTS_PROJECT
             duri5.renderBezier();
             cannon_1.renderBezier();
             tongkat.render();
-;
+            tali.renderBezier();
+            
         }
 
     }
