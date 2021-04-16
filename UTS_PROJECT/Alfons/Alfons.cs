@@ -70,7 +70,6 @@ namespace UTS_PROJECT
             ellipsoidkepala.vao();
             ellipsoidkepala.useshaders(@"C:\Users\c1419\source\repos\UTS_PROJECT\UTS_PROJECT\Alfons\shader\shader.vert", @"C:\Users\c1419\source\repos\UTS_PROJECT\UTS_PROJECT\Alfons\shader\shader.frag");
             ellipsoidkepala.scale(scalekepala);
-            //lipsoidkepala.rotate(60f, 'y');
             ellipsoidkepala.translate(posxellipsoid, posyellipsoid, poszellipsoid);
 
 
@@ -243,41 +242,41 @@ namespace UTS_PROJECT
 
             //KEPALA
             //ellipsoidkepala.sumbux();
-            //ellipsoidkepala.sumbuy();
+            ellipsoidkepala.sumbuy();
             //ellipsoidkepala.sumbuz();
             ellipsoidkepala.drawlines();
             ellipsoidkepala.translate(animasibadan[0], 0.0f, animasibadan[0]);
             //SUNGUT
             //beziersungut[0].sumbux();
-            //beziersungut[0].sumbuy();
+            beziersungut[0].sumbuy();
             //beziersungut[0].sumbuz();
             beziersungut[0].drawlines();
             beziersungut[0].translate(animasibadan[0], 0.0f, animasibadan[0]);
             //beziersungut[1].sumbux();
-            //beziersungut[1].sumbuy();
+            beziersungut[1].sumbuy();
             //beziersungut[1].sumbuz();
             beziersungut[1].drawlines();
             beziersungut[1].translate(animasibadan[0], 0.0f, animasibadan[0]);
             //MATA
             //ellipsoidmata[0].sumbux();
-            //ellipsoidmata[0].sumbuy();
+            ellipsoidmata[0].sumbuy();
             //ellipsoidmata[0].sumbuz();
             ellipsoidmata[0].drawlines();
             ellipsoidmata[0].translate(animasibadan[0], 0.0f, animasibadan[0]);
             //ellipsoidmata[1].sumbux();
-            //ellipsoidmata[1].sumbuy();
+            ellipsoidmata[1].sumbuy();
             //ellipsoidmata[1].sumbuz();
             ellipsoidmata[1].drawlines();
             ellipsoidmata[1].translate(animasibadan[0], 0.0f, animasibadan[0]);
             //HIDUNG
             //ellipsoidhidung.sumbux();
-            //ellipsoidhidung.sumbuy();
+            ellipsoidhidung.sumbuy();
             //ellipsoidhidung.sumbuz();
             ellipsoidhidung.drawlines();
             ellipsoidhidung.translate(animasibadan[0], 0.0f, animasibadan[0]);
             //TANDUK
             //elliptictanduk.sumbux();
-            //elliptictanduk.sumbuy();
+            elliptictanduk.sumbuy();
             //elliptictanduk.sumbuz();
             elliptictanduk.drawlines();
             elliptictanduk.translate(animasibadan[0], 0.0f, animasibadan[0]);
@@ -285,13 +284,13 @@ namespace UTS_PROJECT
             for (int i = 0; i < 7; i++)
             {
                 //ellipsoidbadan[i].sumbux();
-                //ellipsoidbadan[i].sumbuy();
+                ellipsoidbadan[i].sumbuy();
                 //ellipsoidbadan[i].sumbuz();
                 //ellipsoidtangankanan[i].sumbux();
-                //ellipsoidtangankanan[i].sumbuy();
+                ellipsoidtangankanan[i].sumbuy();
                 //ellipsoidtangankanan[i].sumbuz();
                 //ellipsoidtangankiri[i].sumbux();
-                //ellipsoidtangankiri[i].sumbuy();
+                ellipsoidtangankiri[i].sumbuy();
                 //ellipsoidtangankiri[i].sumbuz();
                 if (counteranimasi % 50 == 0)
                 {
@@ -311,12 +310,12 @@ namespace UTS_PROJECT
             }
             //BUNTUT
             //ellipticbuntut.sumbux();
-            //ellipticbuntut.sumbuy();
+            ellipticbuntut.sumbuy();
             //ellipticbuntut.sumbuz();
             ellipticbuntut.drawlines();
             ellipticbuntut.translate(animasibadan[7], 0.0f, animasibadan[7]);
             //ellipsoidbuntutbawah.sumbux();
-            //ellipsoidbuntutbawah.sumbuy();
+            ellipsoidbuntutbawah.sumbuy();
             //ellipsoidbuntutbawah.sumbuz();
             ellipsoidbuntutbawah.drawlines();
             ellipsoidbuntutbawah.translate(animasibadan[7], 0.0f, animasibadan[7]);
@@ -339,7 +338,7 @@ namespace UTS_PROJECT
                 scaleskill = 1.0f;
             }
             //hyperboloidskill.sumbux();
-            //hyperboloidskill.sumbuy();
+            hyperboloidskill.sumbuy();
             //hyperboloidskill.sumbuz();
             hyperboloidskill.drawlines();
             hyperboloidskill.scale(scaleskill);

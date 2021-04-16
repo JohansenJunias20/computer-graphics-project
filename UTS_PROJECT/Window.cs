@@ -39,7 +39,6 @@ namespace UTS_PROJECT
         {
 
         }
-        bool translated = false;
         protected override void OnRenderFrame(FrameEventArgs args)
         {
             //head.Rotate(0f, 90f, 0f);
@@ -61,21 +60,9 @@ namespace UTS_PROJECT
 
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
-            if (currentTranslate >= maxTranslateX)
-            {
-                translateX = -0.01f;
-            }
-
-            if(currentTranslate <= minTranslateX)
-            {
-                translateX = 0.01f;
-            }
-            currentTranslate += translateX;
-            Johansen.Global.translate.X += translateX;
-            //johansen.Translate(translateX);
             johansen.update();
 
-            Alfons.TranslateX(translateX);
+            //Alfons.TranslateX(translateX);
             base.OnUpdateFrame(args);
         }
     }

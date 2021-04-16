@@ -46,7 +46,7 @@ namespace UTS_PROJECT
 
             // 0 adalah titik awal z kemudian di minus 0.08f*5 karena panjang Z total dari nect kemudian di x setengah karena posisi z harus ditengah2
             // 0.1f*0.5f adalah jarak setengah dari kepala
-            neck.setPostion(new Vector3(0f, 0f, 0 + 0.05f + 0.08f * 5f * 0.5f));
+            neck.setPostion(new Vector3(0f, 0f,0 + 0.05f + 0.04f*5f * 0.5f));
             neck.create();
             for (int i = 0; i < 5; i++)
             {
@@ -147,7 +147,7 @@ namespace UTS_PROJECT
             wings.right.furOuter.setTPsize(0.01f, 0.4f, wings.right.innerBone.sizeBox.X);
             wings.setPosition(new Vector3(body.block._position.X, body.block._position.Y+body.block.sizeBox.Y/2f - wings.left.innerBone.sizeBox.Y/2f, body.block._position.Z - body.block.sizeBox.Z / 4f));
             wings.create();
-
+          
 
             head = new Head();
             head.setSize(new Vector3(0.1f, 0.1f, 0.1f));
@@ -220,12 +220,13 @@ namespace UTS_PROJECT
 
             head.render();
             neck.render();
+            head.render();
             body.render();
             wings.render();
             feetsFront.render();
             feetsBack.render();
             tail.render();
-            element.render();
+            //element.render();
 
 
         }

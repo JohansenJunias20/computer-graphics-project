@@ -18,24 +18,6 @@ namespace UTS_PROJECT.Johansen
         {
 
         }
-        public void Animate()
-        {
-            block._transform = Matrix4.Identity;
-            block._transform *= Matrix4.CreateTranslation(Global.translate);
-
-            block._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(Global.angle.X));
-            block._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(Global.angle.Y));
-            block._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(Global.angle.Z));
-            for (int i = 0; i < 3; i++)
-            {
-                fur[i]._transform = Matrix4.Identity;
-                fur[i]._transform *= Matrix4.CreateTranslation(Global.translate);
-
-                fur[i]._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(Global.angle.X));
-                fur[i]._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(Global.angle.Y));
-                fur[i]._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(Global.angle.Z));
-            }
-        }
         public void Rotate(float degX, float degY, float degZ)
         {
             //transform = transform * Matrix4.CreateRotationX(MathHelper.DegreesToRadians(degX));
@@ -72,6 +54,47 @@ namespace UTS_PROJECT.Johansen
             {
                 fur[i]._transform *= Matrix4.CreateTranslation(t);
             }
+        }
+        public void Animate()
+        {
+            block._transform = Matrix4.Identity;
+
+            block._transform *= Matrix4.CreateTranslation(Global.translate);
+
+            block._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(Global.angle.X));
+            block._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(Global.angle.Y));
+            block._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(Global.angle.Z));
+
+
+            fur[0]._transform = Matrix4.Identity;
+
+            fur[0]._transform *= Matrix4.CreateTranslation(Global.translate);
+
+            fur[0]._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(Global.angle.X));
+            fur[0]._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(Global.angle.Y));
+            fur[0]._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(Global.angle.Z));
+
+
+
+
+            fur[1]._transform = Matrix4.Identity;
+
+            fur[1]._transform *= Matrix4.CreateTranslation(Global.translate);
+
+            fur[1]._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(Global.angle.X));
+            fur[1]._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(Global.angle.Y));
+            fur[1]._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(Global.angle.Z));
+
+
+
+
+            fur[2]._transform = Matrix4.Identity;
+
+            fur[2]._transform *= Matrix4.CreateTranslation(Global.translate);
+
+            fur[2]._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(Global.angle.X));
+            fur[2]._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(Global.angle.Y));
+            fur[2]._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(Global.angle.Z));
         }
         public Vector3 size = new Vector3(0, 0, 0);
         //2

@@ -12,6 +12,7 @@ namespace UTS_PROJECT.Johansen
     class Mesh
     {
         public Vector3 rotation;
+        protected Head head;
         protected List<Vector3> vertices = new List<Vector3>();
         protected List<Vector3> textureVertices = new List<Vector3>();
         protected List<Vector3> normals = new List<Vector3>();
