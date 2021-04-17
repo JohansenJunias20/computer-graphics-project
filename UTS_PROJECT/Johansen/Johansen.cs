@@ -15,14 +15,14 @@ namespace UTS_PROJECT
     class JohansenProps
     {
         //Mesh wing;
-        Head head;
-        neck neck;
-        body body;
-        wings wings;
-        front feetsFront;
-        Back feetsBack;
-        Johansen.Tails.Tail tail;
-        Element element;
+        public Head head;
+        public neck neck;
+        public body body;
+        public wings wings;
+        public front feetsFront;
+        public Back feetsBack;
+        public Johansen.Tails.Tail tail;
+        public Element element;
         //feets.bac
         public JohansenProps()
         {
