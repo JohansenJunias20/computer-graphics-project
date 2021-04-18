@@ -12,7 +12,7 @@ namespace UTS_PROJECT
             var ourWindow = new NativeWindowSettings()
             {
                 Size = new Vector2i(1080, 1080),
-                Title = "Johansen Junias - C14190114"
+                Title = "c14190069 c14190114 c14190115"
             };
 
             //gameWindowSetting mengatur hz/frekuensi layar
