@@ -186,8 +186,8 @@ namespace UTS_PROJECT.Johansen.Tails
                 isUp = false;
             }
 
-            radius += isUp ? -0.0005f : 0.0005f;
-            maxDegree += isUp ? 0.005f : -0.005f;
+            radius += isUp ? -0.001f : 0.001f;
+            maxDegree += isUp ? 0.01f : -0.01f;
             //setSize(new Vector3(0.08f, 0.08f, 0.08f * 12f));
             setPostion(new Vector3(0f, 0f, 0 + 0.05f + 0.4f + 0.08f * 12f * 0.5f + 0.08f * 5f));
             create();

@@ -33,9 +33,9 @@ namespace UTS_PROJECT.Johansen.feets.backs
             //arm._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(-rotation.Y));
             //arm._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(-rotation.Z));
             //arm._shader.SetMatrix4("transform", arm._transform);
-            armDeg += goFront ? 0.005f : -0.005f;
-            forearmDeg += goFront ? 0.008f : -0.008f;
-            palmDeg += goFront ? 0.008f : -0.008f;
+            armDeg += goFront ? 0.05f : -0.05f;
+            forearmDeg += goFront ? 0.07f : -0.07f;
+            palmDeg += goFront ? 0.08f : -0.08f;
 
             arm._transform = Matrix4.Identity;
             //Rotating ARM first

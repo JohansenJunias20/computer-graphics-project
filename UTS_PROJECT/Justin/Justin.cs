@@ -18,6 +18,7 @@ namespace UTS_PROJECT
         public Mesh duri4, duri5;
         public Mesh tongkat;
         public Mesh tali;
+        public Mesh tanah;
 
         public JustinProps()
         {
@@ -35,11 +36,15 @@ namespace UTS_PROJECT
             duri5 = new Mesh();
             tongkat = new Mesh();
             tali = new Mesh();
+            tanah = new Mesh();
 
             tongkat.setPosition(new Vector3(0, 0, 0));
             cannon_1.setPosition(new Vector3(0.0f, 0f, 0.0f));
             tongkat.setSize(new Vector3(1.5f, 0.06f, 0.06f));
             tali.setPositionBezier(new Vector3(cannon_1._position.X + 0.0f, cannon_1._position.Y + -0.1f, cannon_1._position.Z + 0.0f));
+
+            tanah.setPosition(new Vector3(0.0f, -0.9f, 0.0f));
+            tanah.setSize(new Vector3(2.0f, 0.2f, 0.0f));
 
             cannon_1.radius = new Vector3(0.05f, 0.05f, 0.05f);
             duri.setPosition(new Vector3(cannon_1._position.X + 0.0f, cannon_1._position.Y + cannon_1.radius.X/2f, cannon_1._position.Z + 0.0f));
@@ -57,6 +62,8 @@ namespace UTS_PROJECT
             duri5.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader1.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader1.frag");
             tongkat.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.frag");
             tali.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.frag");
+            cannon_1.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader4.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader4.frag");
+            tanah.setShaderPath("C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.vert", "C:\\Users\\c1419\\source\\repos\\UTS_PROJECT\\UTS_PROJECT\\Justin\\Shaders\\shader2.frag");
 
             duri.createKerucut();
             duri1.createKerucut();
@@ -66,6 +73,7 @@ namespace UTS_PROJECT
             duri5.createKerucut();
             tongkat.createBoxVertices();
             cannon_1.createBall();
+            tanah.createBoxVertices();
             tali.createBezier(new Vector3(tali._position.X + 0.0f, tali._position.Y + 0.5f, tali._position.Z),
                 new Vector3(tali._position.X + 0.5f, tali._position.Y + 0.5f, tali._position.Z),
                 new Vector3(tali._position.X + 0.5f, tali._position.Y + 0.7f, tali._position.Z), 0.04f);
@@ -76,8 +84,9 @@ namespace UTS_PROJECT
             duri3.setupObject();
             duri4.setupObject();
             duri5.setupObject();
-            cannon_1.setupObject();
             tongkat.setupObject();
+            cannon_1.setupObject();
+            tanah.setupObject();
             tali.setupBezier();
 
             duri1._transform *= Matrix4.CreateTranslation(new Vector3(-duri1._position.X, -duri1._position.Y, -duri1._position.Z));
@@ -186,7 +195,7 @@ namespace UTS_PROJECT
             cannon_1.renderBezier();
             tongkat.render();
             tali.renderBezier();
-            
+            tanah.render();
         }
 
     }

@@ -34,7 +34,7 @@ namespace UTS_PROJECT
         int counteranimasi = 0;
         float[] animasibadan = new float[8];
 
-        int counterscale = 0;
+        int counterscale = -1;
         float scaleskill = 1.0f;
         float angle = 90f;
         //string path = "C/Users/richa/Documents/Kuliah/Semester 4/GRAFKOM/12maret(2)/asset/testing.obj";
@@ -119,7 +119,7 @@ namespace UTS_PROJECT
             hyperboloidskill.vbo();
             hyperboloidskill.vao();
             hyperboloidskill.useshaders(@"C:\Users\c1419\source\repos\UTS_PROJECT\UTS_PROJECT\Alfons\shader\shaderskill.vert", @"C:\Users\c1419\source\repos\UTS_PROJECT\UTS_PROJECT\Alfons\shader\shaderskill.frag");
-            hyperboloidskill.rotate(65f, 'y');
+            hyperboloidskill.rotate(90f, 'y');
             hyperboloidskill.rotate(30f, 'z');
             hyperboloidskill.scale(0.05f);
             hyperboloidskill.translate(posxellipsoid - 0.31f, posyellipsoid - 0.05f, poszellipsoid);
@@ -320,6 +320,7 @@ namespace UTS_PROJECT
             ellipsoidbuntutbawah.drawlines();
             ellipsoidbuntutbawah.translate(animasibadan[7], 0.0f, animasibadan[7]);
             //SKILL
+
             if (counterscale < 10)
             {
                 scaleskill += 0.0005f;
@@ -328,20 +329,20 @@ namespace UTS_PROJECT
             {
                 scaleskill = 1.0f;
             }
-            else if (counterscale < 20)
+            else if (counterscale < 21)
             {
                 scaleskill -= 0.0005f;
             }
             else
             {
-                counterscale = 0;
+                counterscale = -1;
                 scaleskill = 1.0f;
             }
             //hyperboloidskill.sumbux();
             hyperboloidskill.sumbuy();
             //hyperboloidskill.sumbuz();
-            hyperboloidskill.drawlines();
             hyperboloidskill.scale(scaleskill);
+            hyperboloidskill.drawlines();
 
 
         }

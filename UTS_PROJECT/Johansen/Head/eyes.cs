@@ -49,6 +49,11 @@ namespace UTS_PROJECT.Johansen
 
             right._transform = Matrix4.Identity;
 
+            right._transform *= Matrix4.CreateTranslation(-right._position.X, -right._position.Y, -right._position.Z);
+            right._transform *= Matrix4.CreateRotationY(MathHelper.DegreesToRadians(180));
+            right._transform *= Matrix4.CreateTranslation(right._position.X, right._position.Y, right._position.Z);
+
+
             right._transform *= Matrix4.CreateTranslation(Global.translate);
 
             right._transform *= Matrix4.CreateRotationX(MathHelper.DegreesToRadians(Global.angle.X));
@@ -73,15 +78,28 @@ namespace UTS_PROJECT.Johansen
         public void setBothSize(Vector3 size)
         {
             left.sizeBox = size;
+
+            left.sisi = size.X;
+            left.Ttinggi = size.Y;
+            left.tinggi = size.Z;
+
+
             right.sizeBox = size;
+
+            right.sisi = size.X;
+            right.Ttinggi = size.Y;
+            right.tinggi = size.Z;
         }
         //3
         public void create()
         {
-            left.createBoxVertices();
-            right.createBoxVertices();
+            left.createTrianglePrism();
+            right.createTrianglePrism();
             left.setupObject();
             right.setupObject();
+            right._transform *= Matrix4.CreateTranslation(-right._position.X, -right._position.Y, -right._position.Z);
+            right._transform *= Matrix4.CreateRotationZ(MathHelper.DegreesToRadians(180));
+            right._transform *= Matrix4.CreateTranslation(right._position.X, right._position.Y, right._position.Z);
         }
         //4
         public void render()

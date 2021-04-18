@@ -30,7 +30,6 @@ namespace UTS_PROJECT
 
         public void Load()
         {
-            GL.ClearColor(0.1f, 0.5f, 0.3f, 1f);
             //GL.Enable(EnableCap.LIG)
             //face = new Mesh();
             //face.createBoxVertices();
@@ -173,7 +172,9 @@ namespace UTS_PROJECT
             element = new Element();
             element.node.radius = new Vector3(0.02f, 0.02f,0.02f);
             element.setRadius(new Vector3(0.3f,0.3f,0.3f));
-            element.setPosition(new Vector3( head.kepala._position.X,head.kepala._position.Y,head.kepala._position.Z - head.kepala.sizeBox.Z - head.mouth.size.Z));
+            element.setPosition(new Vector3( head.kepala._position.X,head.kepala._position.Y,head.kepala._position.Z - head.kepala.sizeBox.Z - head.mouth.size.Z - 0.02f));
+            element.node.setShaderPath(@"C:\Users\c1419\source\repos\UTS_PROJECT\UTS_PROJECT\Johansen\Shaders\Effects\bulge\shader.vert",
+                @"C:\Users\c1419\source\repos\UTS_PROJECT\UTS_PROJECT\Johansen\Shaders\Effects\bulge\shader.frag");
             element.create();
 
             Translate(Global.translate);

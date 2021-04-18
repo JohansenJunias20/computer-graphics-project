@@ -80,7 +80,7 @@ namespace UTS_PROJECT.Johansen
                 goingBigger = true;
             }
 
-            scale += goingBigger ? 0.000033f : -0.000033f;
+            scale += goingBigger ? 0.0001f : -0.0001f;
             node._transform = Matrix4.Identity;
             node._transform *= Matrix4.CreateTranslation(-node._position.X, -node._position.Y, -node._position.Z);
             node._transform *= Matrix4.CreateScale(scale);

@@ -90,9 +90,9 @@ namespace UTS_PROJECT.Johansen.Feets.Fronts
             {
                 goFront = false;
             }
-            armDeg += goFront ? 0.005f : -0.005f;
-            forearmDeg += goFront ? 0.008f : -0.008f;
-            palmDeg += goFront ? 0.008f : -0.008f;
+            armDeg += goFront ? 0.05f : -0.05f;
+            forearmDeg += goFront ? 0.07f : -0.07f;
+            palmDeg += goFront ? 0.08f : -0.08f;
 
 
             arm._transform = Matrix4.Identity;

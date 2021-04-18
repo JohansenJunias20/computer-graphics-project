@@ -90,7 +90,7 @@ namespace UTS_PROJECT.Johansen
                 opening = true;
             }
 
-            openDeg += opening ? -0.005f : 0.005f;
+            openDeg += opening ? -0.01f : 0.01f;
 
             bawah._transform = Matrix4.Identity;
 

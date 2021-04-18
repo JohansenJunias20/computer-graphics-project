@@ -29,7 +29,7 @@ namespace UTS_PROJECT
 
         protected override void OnLoad()
         {
-            GL.ClearColor(0.1f, 0.5f, 0.3f, 1f);
+            GL.ClearColor(0.529f, 0.808f, 0.922f, 1.0f);
             johansen.Load();
             alfons.load();
             justin.load();
@@ -59,6 +59,7 @@ namespace UTS_PROJECT
         float duriDeg = 0f;
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
+            System.Threading.Thread.Sleep(1);
             johansen.update();
             Vector3 positionFeetDragon =  johansen.feetsFront.left.palm._position;
             positionFeetDragon.X -= justin.tongkat.sizeBox.X / 2f * 0.2f;
@@ -85,8 +86,8 @@ namespace UTS_PROJECT
 
             //0.0f, - 0.8f, 0.0f
             justin.cannon_1._transform = Matrix4.Identity;
-            justin.cannon_1._transform *= Matrix4.CreateTranslation(offsetCannon);
             justin.cannon_1._transform *= Matrix4.CreateTranslation(positionFeetDragon);
+            justin.cannon_1._transform *= Matrix4.CreateTranslation(offsetCannon);
             justin.cannon_1._transform *= Matrix4.CreateTranslation(Johansen.Global.translate);
 
 
